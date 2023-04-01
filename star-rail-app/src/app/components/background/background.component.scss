@@ -1,0 +1,26 @@
+@import '../../../styles/colors.scss';
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../../../assets/images/main_background.jpg);
+    background-color: $star-rail-black;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    outline: 8px solid $star-rail-black;
+    z-index: -2;
+}
+
+.content-panel {
+    position: fixed;
+    top: 0;
+    height: 2000px;
+    width: 80%;
+    background-color: rgba(3, 10, 20, 0.8);
+    opacity: 0.8;
+    z-index: -1;
+}

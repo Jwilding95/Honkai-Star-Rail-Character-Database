@@ -1,0 +1,71 @@
+<app-top-nav></app-top-nav>
+
+<div class="main">
+
+    <div class="background"></div>
+    <div class="content-panel"></div>
+    <div class="content-container">
+
+        <!-- Header -->
+        <div class="header">
+            <img src="../../../assets/images/main_logo.png">
+            <p>Honkai: Star Rail<br>Character Database</p>
+        </div>
+        <div class="content">
+
+            <!-- Characters -->
+            <div class="character-container">
+                <div class="character-header">
+                    Characters
+                </div>
+                <div class="character-content">
+                    <div class="character-rarity">✦ ✦ ✦ ✦</div>
+                    <div class="characters">
+                        <div class="character" *ngFor="let character of four_star_characters">
+                            <img [src]="character.imageUrl">
+                            <p>{{character.name}}</p>
+                        </div>
+                    </div>
+                    <div class="character-rarity">✦ ✦ ✦ ✦ ✦</div>
+                    <div class="characters">
+                        <div class="character" *ngFor="let character of five_star_characters">
+                            <img [src]="character.imageUrl">
+                            <p>{{character.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elements -->
+            <div class="element-container">
+                <div class="element-header">
+                    Elements
+                </div>
+                <div class="element-content">
+                    <div class="elements">
+                        <div class="element" *ngFor="let element of elements">
+                            <img [src]="element.imageUrl">
+                            <p>{{element.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paths -->
+            <div class="path-container">
+                <div class="path-header">
+                    Paths
+                </div>
+                <div class="path-content">
+                    <div class="paths">
+                        <div class="path" *ngFor="let path of paths">
+                            <img [src]="path.imageUrl">
+                            <p>{{path.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

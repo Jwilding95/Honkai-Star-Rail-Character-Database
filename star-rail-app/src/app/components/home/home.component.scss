@@ -1,0 +1,136 @@
+@import '../../../styles/colors.scss';
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../../../assets/images/main_background.jpg);
+    background-color: $star-rail-black;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    outline: 8px solid $star-rail-black;
+    z-index: -2;
+}
+
+.content-panel {
+    position: fixed;
+    top: 0;
+    height: 2000px;
+    width: 80%;
+    background-color: rgba(3, 10, 20, 0.8);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.content-container {
+    height: 100%;
+    width: 80%;
+    padding: 3.2em 4.4em 0;
+    padding-top: calc(2.4em + 72px);
+    box-sizing: border-box;
+
+    .header {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        background-color: rgba(3, 10, 20, 0.8);
+        border-radius: 8px;
+        margin-bottom: 2.4em;
+
+        img {
+            height: 180px;
+            padding-right: 1.2em;
+        }
+
+        p {
+            font-size: 52px;
+            font-weight: 600;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .character-container, .element-container, .path-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2.4em;
+
+        .character-header, .element-header, .path-header {
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            background-color: rgba(3, 10, 20, 0.8);
+            width: 100%;
+            padding: 0.6em 0;
+            border-radius: 8px;
+            margin-bottom: 0.6em;
+        }
+
+        .element-content, .path-content {
+            padding-top: 2.4em;
+        }
+
+        .character-content, .element-content, .path-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(3, 10, 20, 0.8);
+            width: 100%;
+            border-radius: 8px;
+            padding-bottom: 2.4em;
+
+            .character-rarity {
+                font-size: 16px;
+                color: white;
+                padding: 1.2em;
+            }
+
+            .characters, .elements, .paths {
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1em;
+
+                .character img {
+                    border-radius: 10px;
+                }
+
+                .character, .element, .path {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 180px;
+                    width: 130px;
+                    background-color: $star-rail-blue;
+                    border-radius: 4px;
+    
+                    img {
+                        height: 100px;
+                        width: 100px;
+                    }
+    
+                    p {
+                        color: white;
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../../styles/colors.scss';
+
+.main {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 72px;
+    background-color: $star-rail-black;
+
+    .nav-left {
+        display: flex;
+
+        .logo {
+            height: 100%;
+            width: 125px;
+            
+            img {
+                height: inherit;
+            }
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &:first-child {
+                width: 125px;
+            }
+
+            &:not(:first-child) {
+                color: white;
+                width: fit-content;
+                padding: 0 12px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
